@@ -1,0 +1,12 @@
+{
+  "source_url": "https://pxdata.stat.fi/PxWeb/api/v1/en/StatFin/kony/13fd.px",
+  "retrieved_utc": "2026-11-04T17:10:07.428707+00:00",
+  "end_quarter": "2025Q4",
+  "sha256": {
+    "data/raw/statfin_kony_13fd_query.json": "5f9fdb707484eafc0301b0f0aa7b6e4403a5626e2a1dfd5182ddaa03caebd16a",
+    "data/raw/statfin_kony_13fd_metadata.json": "aa0ee5bbe9fbdc52e381b01e2cd095ff09393f57dd9c76a382c02839e02a2cda",
+    "data/raw/statfin_kony_13fd_response.json": "b6fda5b75a9d10bf3a7064d05ff4854b6d61717142f243ac2a4bff552b5294e7"
+  },
+  "licence": "CC BY 4.0",
+  "attribution": "Source: Statistics Finland"
+}
