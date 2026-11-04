@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "title": "Illustrative one-year Finnish corporate credit-loss scenarios",
+  "horizon_years": 1,
+  "currency": "EUR",
+  "input_status": {
+    "exposure_eur": "Observed outstanding loan balance used as fixed EAD proxy",
+    "baseline_pd": "Assumed; common across sectors to isolate composition and stress choices",
+    "baseline_lgd": "Assumed; common across sectors to isolate composition and stress choices",
+    "adverse_parameters": "Assumed; not estimated or calibrated to economic series"
+  },
+  "economic_narrative": {
+    "baseline": "Reference-date exposures held fixed over one year; common teaching assumptions for PD and LGD.",
+    "adverse": "Weaker activity raises default risk. Lower collateral values and more difficult recoveries raise loss severity. Sector differences are chosen assumptions, not empirical coefficients.",
+    "macro_link": "Observed bankruptcies provide historical context only. No quantitative macro-to-PD or macro-to-LGD relationship is fitted or claimed."
+  },
+  "units": {
+    "pd": "Fraction over one year",
+    "lgd": "Fraction of exposure lost conditional on default",
+    "adverse_lgd_uplift": "Additive fraction: 0.10 is 10 percentage points",
+    "adverse_pd_multiplier": "Multiplicative factor applied to baseline PD"
+  },
+  "capping": "Validate inputs first, cap stressed PD and LGD at 1, report affected sector counts.",
+  "sectors": {
+    "manufacturing": {
+      "baseline_pd": 0.015,
+      "baseline_lgd": 0.4,
+      "adverse_pd_multiplier": 2,
+      "adverse_lgd_uplift": 0.05
+    },
+    "construction": {
+      "baseline_pd": 0.015,
+      "baseline_lgd": 0.4,
+      "adverse_pd_multiplier": 3,
+      "adverse_lgd_uplift": 0.1
+    },
+    "real_estate": {
+      "baseline_pd": 0.015,
+      "baseline_lgd": 0.4,
+      "adverse_pd_multiplier": 3,
+      "adverse_lgd_uplift": 0.15
+    },
+    "other": {
+      "baseline_pd": 0.015,
+      "baseline_lgd": 0.4,
+      "adverse_pd_multiplier": 2,
+      "adverse_lgd_uplift": 0.05
+    }
+  },
+  "sensitivity": {
+    "pd_multipliers": [
+      1,
+      1.5,
+      2,
+      2.5,
+      3,
+      3.5,
+      4
+    ],
+    "lgd_uplifts": [
+      0,
+      0.05,
+      0.1,
+      0.15,
+      0.2
+    ],
+    "interpretation": "Uniform shocks to baseline across sectors, separate from sector-specific adverse scenario. Not a confidence interval."
+  }
+}
