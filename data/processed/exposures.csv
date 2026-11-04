@@ -1,0 +1,5 @@
+sector,exposure_eur,source_industry,reference_date,value_status,exposure_basis
+manufacturing,9737497210.38,C,2025-12-31,observed,outstanding stock; NPLs not deducted
+construction,2559937719.98,F,2025-12-31,observed,outstanding stock; NPLs not deducted
+real_estate,16266265495.54,L,2025-12-31,observed,outstanding stock; NPLs not deducted
+other,34351837142.9,residual,2025-12-31,derived residual,outstanding stock; NPLs not deducted

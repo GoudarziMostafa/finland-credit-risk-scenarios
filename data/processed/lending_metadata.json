@@ -1,0 +1,22 @@
+{
+  "retrieved_utc": "2026-11-04T17:10:51.599743+00:00",
+  "requests": {
+    "series": "https://api.boffsaopendata.fi/v4/series/MFI_PUBL?seriesName=M.A.0.A.A20.A.A.U6.2241.ZZ.Z01.A.A.0.A.0.A.0%3BM.A.0.A.A20.A.A.U6.2241.C.Z01.A.A.0.A.0.A.0%3BM.A.0.A.A20.A.A.U6.2241.F.Z01.A.A.0.A.0.A.0%3BM.A.0.A.A20.A.A.U6.2241.L.Z01.A.A.0.A.0.A.0&pageSize=100",
+    "observations": "https://api.boffsaopendata.fi/v4/observations/MFI_PUBL?seriesName=M.A.0.A.A20.A.A.U6.2241.ZZ.Z01.A.A.0.A.0.A.0%3BM.A.0.A.A20.A.A.U6.2241.C.Z01.A.A.0.A.0.A.0%3BM.A.0.A.A20.A.A.U6.2241.F.Z01.A.A.0.A.0.A.0%3BM.A.0.A.A20.A.A.U6.2241.L.Z01.A.A.0.A.0.A.0&pageSize=100"
+  },
+  "sha256": {
+    "data/raw/bof_mfi_series.json": "8150460b32da0be70d5b3adccc8ad08415ff3d3458be4b76fc24fd3530a71d95",
+    "data/raw/bof_mfi_observations.json": "1cce2772cfd441259fda07763c71c305251f44b67d17d7c6ed55e301518469ee"
+  },
+  "licence_header": "Creative Common CC BY 4.0.",
+  "reference_period": "2025Q4",
+  "reference_date": "2025-12-31",
+  "reported_total_exposure_eur": 62915537568.8,
+  "units": "EUR; source EUR millions multiplied by 1,000,000",
+  "coverage": "MFIs excluding Bank of Finland; domestic non-financial corporations, excluding housing corporations; all currencies expressed in euros.",
+  "industry_classification": "TOL 2008. C/F/L series end December 2025; total continues later. Common cutoff deliberately fixed at December 2025.",
+  "other_definition": "Total less manufacturing, construction and real estate; includes remaining and unclassified industries.",
+  "exposure_definition": "Outstanding loan stock used as fixed EAD proxy. Existing non-performing balances are retained; compatible NPL balances were not included in this snapshot.",
+  "interpretation": "Scenario loss proxy on total outstanding stocks, not an estimate of new defaults on performing loans or IFRS 9 provisions.",
+  "housing_scope_corroboration": "https://www.suomenpankki.fi/en/statistics/statistical-news/mfi-balance-sheet/2026/household-bank-loans-almost-unchanged-year-on-year-in-december-2025/"
+}
