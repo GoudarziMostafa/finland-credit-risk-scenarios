@@ -1,0 +1,74 @@
+{
+  "segments": [
+    {
+      "sector": "manufacturing",
+      "exposure_eur": 9737497210.38,
+      "baseline_pd": 0.015,
+      "baseline_lgd": 0.4,
+      "baseline_loss_eur": 58424983.262279995,
+      "baseline_loss_rate": 0.006,
+      "adverse_pd": 0.03,
+      "adverse_lgd": 0.45,
+      "adverse_loss_eur": 131456212.34012999,
+      "adverse_loss_rate": 0.0135,
+      "increase_eur": 73031229.07784998,
+      "pd_capped": false,
+      "lgd_capped": false
+    },
+    {
+      "sector": "construction",
+      "exposure_eur": 2559937719.98,
+      "baseline_pd": 0.015,
+      "baseline_lgd": 0.4,
+      "baseline_loss_eur": 15359626.319880001,
+      "baseline_loss_rate": 0.006,
+      "adverse_pd": 0.045,
+      "adverse_lgd": 0.5,
+      "adverse_loss_eur": 57598598.699549995,
+      "adverse_loss_rate": 0.0225,
+      "increase_eur": 42238972.379669994,
+      "pd_capped": false,
+      "lgd_capped": false
+    },
+    {
+      "sector": "real_estate",
+      "exposure_eur": 16266265495.54,
+      "baseline_pd": 0.015,
+      "baseline_lgd": 0.4,
+      "baseline_loss_eur": 97597592.97324,
+      "baseline_loss_rate": 0.006,
+      "adverse_pd": 0.045,
+      "adverse_lgd": 0.55,
+      "adverse_loss_eur": 402590071.01461506,
+      "adverse_loss_rate": 0.02475,
+      "increase_eur": 304992478.04137504,
+      "pd_capped": false,
+      "lgd_capped": false
+    },
+    {
+      "sector": "other",
+      "exposure_eur": 34351837142.9,
+      "baseline_pd": 0.015,
+      "baseline_lgd": 0.4,
+      "baseline_loss_eur": 206111022.8574,
+      "baseline_loss_rate": 0.006,
+      "adverse_pd": 0.03,
+      "adverse_lgd": 0.45,
+      "adverse_loss_eur": 463749801.42915004,
+      "adverse_loss_rate": 0.0135,
+      "increase_eur": 257638778.57175004,
+      "pd_capped": false,
+      "lgd_capped": false
+    }
+  ],
+  "totals": {
+    "exposure_eur": 62915537568.8,
+    "baseline_loss_eur": 377493225.4128,
+    "adverse_loss_eur": 1055394683.483445,
+    "increase_eur": 677901458.0706451,
+    "baseline_loss_rate": 0.006,
+    "adverse_loss_rate": 0.016774786074574024,
+    "pd_cap_count": 0,
+    "lgd_cap_count": 0
+  }
+}

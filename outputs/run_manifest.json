@@ -1,0 +1,107 @@
+{
+  "generated_at_utc": "2026-11-04T23:40:50.568415+00:00",
+  "purpose": "Reproducible scenario analysis",
+  "python": "3.13.1",
+  "scenario_configuration": {
+    "schema_version": 1,
+    "title": "Illustrative one-year Finnish corporate credit-loss scenarios",
+    "horizon_years": 1,
+    "currency": "EUR",
+    "input_status": {
+      "exposure_eur": "Observed outstanding loan balance used as fixed EAD proxy",
+      "baseline_pd": "Assumed; common across sectors to isolate composition and stress choices",
+      "baseline_lgd": "Assumed; common across sectors to isolate composition and stress choices",
+      "adverse_parameters": "Assumed; not estimated or calibrated to economic series"
+    },
+    "economic_narrative": {
+      "baseline": "Reference-date exposures held fixed over one year; common teaching assumptions for PD and LGD.",
+      "adverse": "Weaker activity raises default risk. Lower collateral values and more difficult recoveries raise loss severity. Sector differences are chosen assumptions, not empirical coefficients.",
+      "macro_link": "Observed bankruptcies provide historical context only. No quantitative macro-to-PD or macro-to-LGD relationship is fitted or claimed."
+    },
+    "units": {
+      "pd": "Fraction over one year",
+      "lgd": "Fraction of exposure lost conditional on default",
+      "adverse_lgd_uplift": "Additive fraction: 0.10 is 10 percentage points",
+      "adverse_pd_multiplier": "Multiplicative factor applied to baseline PD"
+    },
+    "capping": "Validate inputs first, cap stressed PD and LGD at 1, report affected sector counts.",
+    "sectors": {
+      "manufacturing": {
+        "baseline_pd": 0.015,
+        "baseline_lgd": 0.4,
+        "adverse_pd_multiplier": 2,
+        "adverse_lgd_uplift": 0.05
+      },
+      "construction": {
+        "baseline_pd": 0.015,
+        "baseline_lgd": 0.4,
+        "adverse_pd_multiplier": 3,
+        "adverse_lgd_uplift": 0.1
+      },
+      "real_estate": {
+        "baseline_pd": 0.015,
+        "baseline_lgd": 0.4,
+        "adverse_pd_multiplier": 3,
+        "adverse_lgd_uplift": 0.15
+      },
+      "other": {
+        "baseline_pd": 0.015,
+        "baseline_lgd": 0.4,
+        "adverse_pd_multiplier": 2,
+        "adverse_lgd_uplift": 0.05
+      }
+    },
+    "sensitivity": {
+      "pd_multipliers": [
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        3.5,
+        4
+      ],
+      "lgd_uplifts": [
+        0,
+        0.05,
+        0.1,
+        0.15,
+        0.2
+      ],
+      "interpretation": "Uniform shocks to baseline across sectors, separate from sector-specific adverse scenario. Not a confidence interval."
+    }
+  },
+  "packages": {
+    "pandas": "2.3.3",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "ipykernel": "7.4.0",
+    "jupyter_client": "8.10.0",
+    "matplotlib-inline": "0.2.2"
+  },
+  "sha256": {
+    "config/scenarios.json": "c96a7fc5a80daa962c38bb2a2776b0f3075a97fb28db5f80f89855c0cd672236",
+    "data/processed/exposures.csv": "f54f318519c7d545eb707d8ca36b46b79d2ad167bfb54ecaf6a197ea6be3b1f8",
+    "data/processed/lending_metadata.json": "a5e86fe45df75bf92af39838ce8c667a16e10861a2cffff181d7056a2ab4bfd5",
+    "data/processed/macro.csv": "1c33897e6aa0b20c7bb5a3ecf43f6d80fedd43a3893884c8baa590d42a9dcb2c",
+    "data/processed/macro_metadata.json": "6824e1b37009ee4485d45067fbeb1f3f0054e315ba4219b4810f20ff13737939",
+    "data/raw/bof_mfi_manifest.json": "2cedf6524413a38fa32355a19f073efb72208239bd60ddaf9e0a603908c0f136",
+    "data/raw/bof_mfi_observations.json": "1cce2772cfd441259fda07763c71c305251f44b67d17d7c6ed55e301518469ee",
+    "data/raw/bof_mfi_series.json": "8150460b32da0be70d5b3adccc8ad08415ff3d3458be4b76fc24fd3530a71d95",
+    "data/raw/statfin_kony_13fd_manifest.json": "aa795eae11b726f746507ecd973d10593c2a26ed4b6225ae44aeb68353f486cf",
+    "data/raw/statfin_kony_13fd_metadata.json": "aa0ee5bbe9fbdc52e381b01e2cd095ff09393f57dd9c76a382c02839e02a2cda",
+    "data/raw/statfin_kony_13fd_query.json": "5f9fdb707484eafc0301b0f0aa7b6e4403a5626e2a1dfd5182ddaa03caebd16a",
+    "data/raw/statfin_kony_13fd_response.json": "b6fda5b75a9d10bf3a7064d05ff4854b6d61717142f243ac2a4bff552b5294e7",
+    "pyproject.toml": "56681bcba9fa6b16a28b2953a1f13ebbb65d05ed5623b804fb2660ec61f02eab",
+    "requirements-lock.txt": "c4db1c8413beb44251627b80292742e71b4eb4c44a4a7ea3e9dd41eef3374212",
+    "scripts/build.py": "9f7c9ff3b9bc4086c9bd980285fae153f0ed6bc416844d1d61be0caeecf4c68a",
+    "src/credit_scenarios/__init__.py": "f17d931b2673a885b302f35fde9ab4a4df85b8a4088fa6a5d7c1adab4ae4339f",
+    "src/credit_scenarios/lending.py": "b8f52c19d7f1ff8844d6bd7b7210e457d079b5042debe409c0b317b920f85579",
+    "src/credit_scenarios/macro.py": "98a000a0b87b23f5158ba346b4d7cfff39ce4c0588d861d85e360cc156d17c2d",
+    "src/credit_scenarios/model.py": "97648a36cc7340c1c6089358eaf0eaee733d48544496223770950869eecb4efa",
+    "src/credit_scenarios/reporting.py": "6367732bd298e4fc81dbb1e0cb4bccd2f2204a55474b871d0d096d12b98b5031"
+  },
+  "reproducibility": "Inputs and code are content-addressed. Build timestamps may differ; numerical outputs should agree."
+}
