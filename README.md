@@ -2,7 +2,7 @@
 
 Explore how observed corporate lending exposures and explicit credit assumptions combine into an illustrative one-year loss scenario.
 
-**[Open the interactive demo →](https://finnish-credit-scenarios.exuberantearth.chatgpt.site)**
+**[Open the interactive demo →](https://goudarzimostafa.github.io/finland-credit-risk-scenarios/)**
 
 Adjust baseline default probability, loss given default and recession severity. The demo recalculates portfolio losses and industry contributions in your browser. Reset returns to the documented reference assumptions.
 
@@ -67,7 +67,7 @@ To run the browser demo locally:
 python -m http.server 8000 --directory site/dist
 ```
 
-Open `http://localhost:8000`. The demo has no backend, account requirement or external JavaScript dependencies.
+Open `http://localhost:8000`. The demo has no backend, account requirement or external JavaScript dependencies. GitHub Pages deploys the files in site/dist automatically when they change on main.
 
 ## Project structure
 
